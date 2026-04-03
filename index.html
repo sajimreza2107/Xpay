@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Student Payment Portal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xpay Student Portal</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -23,17 +24,23 @@
       padding: 20px;
       border-radius: 16px;
       box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .logo {
+      width: 110px;
+      border-radius: 50%;
+      margin-bottom: 10px;
     }
 
     h2 {
-      text-align: center;
       margin-bottom: 20px;
-      font-size: 24px;
       color: #222;
     }
 
     label {
       display: block;
+      text-align: left;
       margin-bottom: 6px;
       font-weight: bold;
       font-size: 14px;
@@ -68,39 +75,29 @@
     button:hover {
       background: #1d4ed8;
     }
-
-    @media (max-width: 480px) {
-      body {
-        padding: 12px;
-      }
-
-      .container {
-        padding: 16px;
-        border-radius: 12px;
-      }
-
-      h2 {
-        font-size: 21px;
-      }
-    }
   </style>
 </head>
+
 <body>
 
   <div class="container">
-    <h2>Student Payment Form</h2>
+
+    <!-- LOGO -->
+    <img src="logo.png" class="logo" alt="Xpay Logo">
+
+    <h2>Xpay Student Payment</h2>
 
     <form>
-      <label for="studentId">Student ID</label>
-      <input type="text" id="studentId" placeholder="Enter student ID" />
+      <label>Student ID</label>
+      <input type="text" id="studentId" placeholder="Enter student ID">
 
-      <label for="name">Student Name</label>
-      <input type="text" id="name" placeholder="Enter student name" />
+      <label>Student Name</label>
+      <input type="text" id="name" placeholder="Enter student name">
 
-      <label for="contact">Contact Number</label>
-      <input type="text" id="contact" placeholder="01XXXXXXXXX" />
+      <label>Contact Number</label>
+      <input type="text" id="contact" placeholder="01XXXXXXXXX">
 
-      <label for="month">Payment Month</label>
+      <label>Payment Month</label>
       <select id="month">
         <option>Select month</option>
         <option>January</option>
@@ -117,14 +114,15 @@
         <option>December</option>
       </select>
 
-      <label for="amount">Tuition Fee</label>
-      <input type="number" id="amount" placeholder="Enter amount" />
+      <label>Tuition Fee</label>
+      <input type="number" id="amount" placeholder="Enter amount">
 
-      <label for="remarks">Remarks</label>
+      <label>Remarks</label>
       <textarea id="remarks" placeholder="Optional note"></textarea>
 
-      <button type="submit">Submit</button>
+      <button type="submit">Submit Payment</button>
     </form>
+
   </div>
 
 </body>
