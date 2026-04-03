@@ -1,27 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student Payment Portal</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 450px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #222;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      font-size: 14px;
+      color: #333;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 12px;
+      }
+
+      .container {
+        padding: 16px;
+        border-radius: 12px;
+      }
+
+      h2 {
+        font-size: 21px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <h2>Student Payment Form</h2>
+  <div class="container">
+    <h2>Student Payment Form</h2>
 
-  <form>
-    <input placeholder="Student ID"><br><br>
-    <input placeholder="Name"><br><br>
-    <input placeholder="Contact Number"><br><br>
+    <form>
+      <label for="studentId">Student ID</label>
+      <input type="text" id="studentId" placeholder="Enter student ID" />
 
-    <select>
-      <option>January</option>
-      <option>February</option>
-      <option>March</option>
-    </select><br><br>
+      <label for="name">Student Name</label>
+      <input type="text" id="name" placeholder="Enter student name" />
 
-    <input type="number" placeholder="Amount"><br><br>
+      <label for="contact">Contact Number</label>
+      <input type="text" id="contact" placeholder="01XXXXXXXXX" />
 
-    <button>Submit</button>
-  </form>
+      <label for="month">Payment Month</label>
+      <select id="month">
+        <option>Select month</option>
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+      </select>
+
+      <label for="amount">Tuition Fee</label>
+      <input type="number" id="amount" placeholder="Enter amount" />
+
+      <label for="remarks">Remarks</label>
+      <textarea id="remarks" placeholder="Optional note"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 
 </body>
 </html>
